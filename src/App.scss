@@ -1,0 +1,54 @@
+.app {
+  #hero {
+    height: 500px;
+    padding: 50px 40px;
+
+    background-image: url(./assets/images/porsche4k.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+    cursor: pointer;
+    .hero-wrap {
+      color: black;
+      transition: all ease 1s;
+      &:hover {
+        color: #d5001c;
+      }
+      .hero-title,
+      .hero-subtitle {
+        font-weight: 600;
+        margin: 0;
+      }
+      .hero-title {
+        line-height: 38px;
+        font-size: 2.5em;
+        &::before {
+          width: 1em;
+          color: #d5001c;
+          font-size: 28px;
+          margin-left: -22px;
+          content: ">";
+        }
+      }
+      .hero-subtitle {
+        font-size: 1.5em;
+        line-height: 1.2em;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .app {
+    section#hero {
+      .hero-wrap {
+        .hero-title,
+        .hero-subtitle {
+          max-width: 1200px;
+          width: 100%;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+}
